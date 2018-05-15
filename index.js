@@ -7,28 +7,20 @@ const handleSubmit = function(ev) {
   const userName = f.name.value
   const age = f.age.value
   const favoriteColor = f.favoritecolor.value
-  //create an empty paragraph
-  const list = document.createElement('ul')
-  const array = ['Name: ','Age: ','Favorite Color: ']
   const values = [userName,age,favoriteColor]
-  for (i=0; i<array.length;i++){
-    list.appendChild(renderListItem(array[i],values[i]))
-  }
-
-  users.appendChild(list)
+  users.appendChild(renderList(users,values))
   f.reset()
   f.name.focus()
 }
-
-function renderColor(colorItem,favoriteColor){
-  const colorDiv = document.createElement('div')
-  colorItem.textContent = 'Favorite Color: '
-  colorDiv.style.backgroundColor = favoriteColor
-  colorDiv.style.width = '6rem'
-  colorDiv.style.height = '3rem'
-  colorItem.appendChild(colorDiv)
-  return colorItem
+function renderList(users,values){
+  const list = document.createElement('ul')
+  const array = ['Name: ','Age: ','Favorite Color: ']
+  for (i=0; i<array.length;i++){
+    list.appendChild(renderListItem(array[i],values[i]))
+  }
+  return list
 }
+
 function renderListItem(title,value){
   const item = document.createElement('li')
   if(title == 'Favorite Color: '){
@@ -37,5 +29,14 @@ function renderListItem(title,value){
     item.textContent = `${title} ${value}`
   }
   return item
+}
+function renderColor(colorItem,favoriteColor){
+  const colorDiv = document.createElement('div')
+  colorItem.textContent = 'Favorite Color: '
+  colorDiv.style.backgroundColor = favoriteColor
+  colorDiv.style.width = '6rem'
+  colorDiv.style.height = '3rem'
+  colorItem.appendChild(colorDiv)
+  return colorItem
 }
 form.addEventListener('submit', handleSubmit)
