@@ -1,3 +1,12 @@
-body{
-    font-family: sans-serif;
+h1{
+    text-align: center;
+    color: #87CEEB;
+}
+form{
+    text-align: center;
+}
+.fun{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
