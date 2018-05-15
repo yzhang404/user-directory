@@ -18,13 +18,7 @@ const handleSubmit = function(ev) {
   list.appendChild(ageItem)
 
   const colorItem = document.createElement('li')
-  const colorDiv = document.createElement('div')
-  colorItem.textContent = 'Favorite Color: '
-  colorDiv.style.backgroundColor = favoriteColor
-  colorDiv.style.width = '6rem'
-  colorDiv.style.height = '3rem'
-  colorItem.appendChild(colorDiv)
-  list.appendChild(colorItem)
+  list.appendChild(renderColor(colorItem,favoriteColor))
 
   users.appendChild(list)
 
@@ -32,5 +26,13 @@ const handleSubmit = function(ev) {
   f.reset()
   f.name.focus()
 }
-
+function renderColor(colorItem,favoriteColor){
+  const colorDiv = document.createElement('div')
+  colorItem.textContent = 'Favorite Color: '
+  colorDiv.style.backgroundColor = favoriteColor
+  colorDiv.style.width = '6rem'
+  colorDiv.style.height = '3rem'
+  colorItem.appendChild(colorDiv)
+  return colorItem
+}
 form.addEventListener('submit', handleSubmit)
