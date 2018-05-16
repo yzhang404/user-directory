@@ -12,6 +12,8 @@ const handleSubmit = function(ev) {
   f.reset()
   f.name.focus()
 }
+
+
 function renderList(users,values){
   const list = document.createElement('ul')
   const array = ['Name: ','Age: ','Favorite Color: ']
