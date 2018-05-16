@@ -33,7 +33,7 @@ function renderList(users,values){
 // function renderList(data){
   // const list = document.createElement('ul')
   // const labels = Object.keys(data)
-  // labels.forEach(function(label){
+  // labels.forEach( label => {
     // const item = renderListItem(label, data[label])
     // list.appendChild(item)
   //})
@@ -58,3 +58,7 @@ function renderColor(colorItem,favoriteColor){
   return colorItem
 }
 form.addEventListener('submit', handleSubmit)
+
+// const doTheThing = () =>{
+// another way of writing functions
+//}
