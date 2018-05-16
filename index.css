@@ -1,7 +1,9 @@
 h1{
     text-align: center;
-    color: #87CEEB;
+    color: white;
+    background: linear-gradient(to bottom right,#66cdaa , #00bfff);
 }
+
 form{
     text-align: center;
 }
@@ -9,4 +11,16 @@ form{
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+body {
+    background-image: url('http://blog.visme.co/wp-content/uploads/2017/07/50-Beautiful-and-Minimalist-Presentation-Backgrounds-03.jpg');
+ }
+#btn{
+    border: 2px teal;
+    border-width: 4px;
+    background-color: white;
+    color: teal;
+    padding: 14px 18px;
+    font-size: 16px;
+    cursor: pointer;
 }
