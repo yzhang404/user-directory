@@ -14,7 +14,6 @@ form{
 }
 body {
     background-image: url('http://blog.visme.co/wp-content/uploads/2017/07/50-Beautiful-and-Minimalist-Presentation-Backgrounds-03.jpg');
-    font-family: 'Slabo 27px', serif;
  }
 #btn{
     border: 2px teal;
@@ -29,18 +28,3 @@ body {
     display: grid;
     grid-template-columns: auto auto auto;
   }
-main{
-   display: flex;
-   justify-content: space-around;
-}
-
-label{
-    display: block;
-}
-dl > li{
-    list-style: square;
-}
-
-dl:nth-of-type(even){
-    background-color: azure;
-}
