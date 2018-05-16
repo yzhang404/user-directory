@@ -7,40 +7,40 @@ const handleSubmit = function(ev) {
   const userName = f.name.value
   const age = f.age.value
   const favoriteColor = f.favoritecolor.value
-  // const user={
-    //userName: f.name.value,
-  // age: f.age.value,
-  // favoriteColor: renderColor(f.favoritecolor.value)
-  //}
+   const user={
+    userName: f.name.value,
+   age: f.age.value,
+   favoriteColor: renderColor(f.favoritecolor.value)
+  }
 
   const values = [userName,age,favoriteColor]
-  users.appendChild(renderList(users,values))
-  // users.appendChild(renderList(user))
+  //users.appendChild(renderList(users,values))
+   users.appendChild(renderList(user))
   f.reset()
   f.name.focus()
 }
 
 
-function renderList(users,values){
-  const list = document.createElement('ul')
-  const array = ['Name: ','Age: ','Favorite Color: ']
-  for (i=0; i<array.length;i++){
-    list.appendChild(renderListItem(array[i],values[i]))
-  }
-  return list
-}
-
-// function renderList(data){
-  // const list = document.createElement('dl')
-  // const labels = Object.keys(data)
-  // labels.forEach( label => {
-    // const item = renderListItem(label, data[label])
-    // list.appendChild(item)
-  //})
-  // return list
+//function renderList(users,values){
+  //const list = document.createElement('ul')
+  //const array = ['Name: ','Age: ','Favorite Color: ']
+  //for (i=0; i<array.length;i++){
+    //list.appendChild(renderListItem(array[i],values[i]))
+  //}
+  //return list
 //}
+
+ function renderList(data){
+   const list = document.createElement('dl')
+   const labels = Object.keys(data)
+   labels.forEach( label => {
+   const item = renderListItem(label, data[label])
+   list.appendChild(item)
+  })
+   return list
+}
 function renderListItem(title,value){
-  const item = document.createElement('li')
+  //const item = document.createElement('li')
   const term = document.createElement('dt')
   term.textContent = title
   const description = document.createElement('dd')
