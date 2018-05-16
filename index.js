@@ -7,6 +7,18 @@ const handleSubmit = function(ev) {
   const userName = f.name.value
   const age = f.age.value
   const favoriteColor = f.favoritecolor.value
+  // const user={
+    //userName: f.name.value,
+  // age: f.age.value,
+  // favoriteColor: renderColor(favoriteColor)
+  //}
+  // const list = document.createElement('ul')
+  // const labels = Object.keys(user)
+  // labels.forEach(function(label){
+    // const item = renderListItem(label, user[label])
+    // list.appendChild(item)
+  //})
+
   const values = [userName,age,favoriteColor]
   users.appendChild(renderList(users,values))
   f.reset()
