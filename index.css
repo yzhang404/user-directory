@@ -41,3 +41,6 @@ main{
 label{
     display: block;
 }
+dl > li{
+    list-style: square;
+}
