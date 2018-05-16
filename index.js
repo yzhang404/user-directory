@@ -31,7 +31,7 @@ function renderList(users,values){
 }
 
 // function renderList(data){
-  // const list = document.createElement('ul')
+  // const list = document.createElement('dl')
   // const labels = Object.keys(data)
   // labels.forEach( label => {
     // const item = renderListItem(label, data[label])
@@ -41,11 +41,23 @@ function renderList(users,values){
 //}
 function renderListItem(title,value){
   const item = document.createElement('li')
-  if(title == 'Favorite Color: '){
-      return renderColor(item,value)
-  } else{
-    item.textContent = `${title} ${value}`
+  const term = document.createElement('dt')
+  term.textContent = title
+  const description = document.createElement('dd')
+
+  //if(title == 'Favorite Color: '){
+    //  return renderColor(item,value)
+  //} else{
+    //item.textContent = `${title} ${value}`
+  //}
+
+  try{
+    description.appendChild(value)
+  } catch(e){
+    description.textContent += value
   }
+  item.appendChild(term)
+  item.appendChild(description)
   return item
 }
 function renderColor(colorItem,favoriteColor){
